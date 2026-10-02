@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ryo’s Craft | Driftwood Art & Natural Wood</title>
+<meta name="description" content="Ryo’s Craft。流木と木の表情を生かした、ナチュラルな一点もののアート作品。">
+<style>
+:root{
+  --bg:#171612;--paper:#eee9dc;--muted:#aaa18f;--wood:#8b6847;--line:rgba(238,233,220,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--paper);font-family:Georgia,"Times New Roman","Hiragino Mincho ProN",serif;line-height:1.8}
+a{color:inherit;text-decoration:none}
+.hero{min-height:92vh;display:flex;align-items:flex-end;padding:48px 7vw;position:relative;overflow:hidden;
+background:
+radial-gradient(circle at 80% 25%,rgba(139,104,71,.28),transparent 32%),
+linear-gradient(125deg,#11110f 0%,#28231b 55%,#151512 100%)}
+.hero:after{content:"";position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(92deg,transparent 0 13px,#c49b70 14px 15px,transparent 16px 37px);mix-blend-mode:soft-light}
+.wrap{max-width:1080px;margin:auto;width:100%;position:relative;z-index:1}
+.logo{display:flex;align-items:center;gap:14px;margin-bottom:18vh}
+.mark{width:56px;height:56px;border:1px solid rgba(238,233,220,.45);border-radius:50%;display:grid;place-items:center}
+.mark svg{width:34px;height:34px}
+.brand{font-size:clamp(24px,4vw,42px);font-style:italic;letter-spacing:.02em}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#c5bba9}
+h1{font-size:clamp(46px,9vw,104px);line-height:.95;font-weight:400;margin:12px 0 24px;letter-spacing:-.04em}
+.lead{max-width:620px;color:#c7c0b2;font-size:17px}
+.cta{display:inline-block;margin-top:28px;border:1px solid rgba(238,233,220,.55);padding:10px 20px;letter-spacing:.14em;font-size:12px}
+section{padding:110px 7vw}
+.section-title{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:42px}
+.about{background:#e9e3d6;color:#211f1a}
+.about .section-title{color:#766b5a}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:70px;align-items:start}
+h2{font-size:clamp(34px,5vw,62px);font-weight:400;line-height:1.05;margin:0}
+.about p{font-size:17px;max-width:620px}
+.works{background:#1c1a16}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{min-height:360px;border:1px solid var(--line);padding:18px;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:linear-gradient(145deg,#30281f,#171612)}
+.card:before,.card:after{content:"";position:absolute;background:#8d6d4d;border-radius:50%;filter:blur(.2px);opacity:.75}
+.card:before{width:22px;height:430px;left:45%;top:-35px;transform:rotate(13deg)}
+.card:after{width:13px;height:300px;left:65%;top:50px;transform:rotate(-20deg)}
+.card:nth-child(2){background:linear-gradient(145deg,#292820,#121311)}
+.card:nth-child(2):before{height:500px;left:35%;transform:rotate(-9deg)}
+.card:nth-child(3):before{height:460px;left:55%;transform:rotate(28deg)}
+.card-content{position:relative;z-index:1;background:linear-gradient(transparent,rgba(0,0,0,.8));margin:-18px;padding:70px 18px 18px;width:calc(100% + 36px)}
+.card h3{margin:0;font-size:22px;font-weight:400}
+.card p{margin:2px 0 0;color:#b9b0a0;font-size:12px}
+.contact{background:#12120f;text-align:center}
+.contact h2{margin-bottom:18px}
+.contact p{color:var(--muted)}
+.mail{display:inline-block;margin-top:20px;border-bottom:1px solid var(--wood);padding-bottom:4px}
+footer{padding:28px 7vw;color:#77705f;font-size:11px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:700px){
+  .hero{min-height:88vh;padding:28px 7vw}.logo{margin-bottom:18vh}
+  .about-grid,.cards{grid-template-columns:1fr}
+  section{padding:78px 7vw}.card{min-height:300px}
+  footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="logo">
+      <div class="mark" aria-label="Ryo’s Craft leaf logo">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 45C26 43 42 35 48 17C31 18 18 26 17 45Z" stroke="#eee9dc" stroke-width="2.5"/>
+          <path d="M18 45C27 37 34 30 43 22" stroke="#eee9dc" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="brand">Ryo’s Craft</div>
+    </div>
+    <div class="kicker">Driftwood Art / Natural Wood</div>
+    <h1>Wood has<br>a story.</h1>
+    <p class="lead">流木や木の表情をそのままに。自然の形を生かしながら、暮らしの中に残る一点ものをつくっています。</p>
+    <a class="cta" href="#works">VIEW WORKS ↓</a>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-title">About Ryo’s Craft</div>
+    <div class="about-grid">
+      <h2>自然を拾い、<br>形にする。</h2>
+      <p>海や森で出会った流木、木の節、割れ、色。人の手で整えすぎず、それぞれが持つ個性を残して作品にします。<br><br>キャンプやアウトドアの空気感、木の温度を感じられるインテリアを目指して。すべて一点ものです。</p>
+    </div>
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="section-title">Selected Works</div>
+    <div class="cards">
+      <article class="card"><div class="card-content"><h3>Driftwood Frame</h3><p>流木フレーム</p></div></article>
+      <article class="card"><div class="card-content"><h3>Wall Sculpture</h3><p>ウォールアート</p></div></article>
+      <article class="card"><div class="card-content"><h3>Natural Object</h3><p>一点ものオブジェ</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-title">Contact</div>
+    <h2>Let’s make something<br>with wood.</h2>
+    <p>作品・オーダーメイド・展示についてのお問い合わせ</p>
+    <a class="mail" href="mailto:hello@ryos-craft.example">hello@ryos-craft.example</a>
+  </div>
+</section>
+
+<footer>
+  <span>© Ryo’s Craft</span>
+  <span>Driftwood Art & Natural Wood</span>
+</footer>
+</body>
+</html>
