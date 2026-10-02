@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Ryo's Craft | 流木・天然木・照明を使った一点もののクラフト作品">
+
+<title>Ryo's Craft | Nature becomes art.</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0b09;
+  color: #f4eee5;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+  line-height: 1.8;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 64px;
+
+  background: rgba(13, 11, 9, 0.72);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.header-inner {
+  width: min(1180px, calc(100% - 32px));
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.nav {
+  display: none;
+}
+
+.menu-button,
+.menu-close {
+  border: 1px solid rgba(255,255,255,.35);
+  background: transparent;
+  color: #fff;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-size: 19px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+  min-height: 680px;
+
+  overflow: hidden;
+  background: #0d0b09;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+/*
+  TOPPhoto.JPGの中にある
+  VIEW WORKS → の位置に
+  透明なリンクを配置
+*/
+
+.hero-works-link {
+  position: absolute;
+
+  left: 7%;
+  bottom: 24%;
+
+  width: 42%;
+  height: 7%;
+
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+  padding: 88px 24px;
+}
+
+.section-inner {
+  width: min(1180px, 100%);
+  margin: auto;
+}
+
+.section-label {
+  font-size: 12px;
+  letter-spacing: .28em;
+  margin-bottom: 18px;
+  color: #cdbfae;
+}
+
+.section-title {
+  font-size: clamp(34px, 8vw, 68px);
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.section-text {
+  margin-top: 28px;
+
+  color: #d7cec3;
+
+  font-size: 15px;
+  line-height: 2.1;
+}
+
+.outline-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
+  height: 54px;
+
+  margin-top: 30px;
+
+  border: 1px solid rgba(255,255,255,.65);
+
+  font-size: 11px;
+  letter-spacing: .24em;
+
+  transition: .25s;
+}
+
+.outline-button:hover {
+  background: #f4eee5;
+  color: #17120e;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  background: #17120e;
+}
+
+.about-image {
+  width: 100%;
+  margin-top: 48px;
+
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+
+/* =========================
+   WORKS
+========================= */
+
+.works {
+  background: #0d0b09;
+}
+
+.works-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 2px;
+
+  margin-top: 48px;
+}
+
+.work-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #15110e;
+}
+
+.work-card img {
+  width: 100%;
+
+  aspect-ratio: 1 / 1.08;
+
+  object-fit: cover;
+
+  transition: transform .6s;
+}
+
+.work-card:hover img {
+  transform: scale(1.03);
+}
+
+.work-card-caption {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+
+  font-size: 14px;
+
+  letter-spacing: .08em;
+
+  text-shadow: 0 2px 10px #000;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  background: #f0e9df;
+  color: #1c1713;
+}
+
+.gallery .section-label {
+  color: #66594d;
+}
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 14px;
+
+  margin-top: 42px;
+}
+
+.gallery-grid img {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  background: #17120e;
+  text-align: center;
+}
+
+.contact .section-inner {
+  max-width: 760px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #090806;
+}
+
+.footer-image {
+  width: 100%;
+  max-height: 260px;
+
+  object-fit: cover;
+
+  opacity: .72;
+}
+
+.footer-inner {
+  padding: 42px 24px 34px;
+
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.copyright {
+  margin-top: 12px;
+
+  color: #9c9186;
+
+  font-size: 11px;
+  letter-spacing: .15em;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+
+  z-index: 999;
+
+  background: rgba(13,11,9,.97);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: .25s;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-menu li + li {
+  margin-top: 24px;
+}
+
+.mobile-menu a {
+  font-size: 20px;
+  letter-spacing: .18em;
+}
+
+.menu-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+}
+
+
+/* =========================
+   TABLET / PC
+========================= */
+
+@media (min-width: 700px) {
+
+  .site-header {
+    height: 74px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+  }
+
+  .nav a {
+    font-size: 11px;
+
+    letter-spacing: .18em;
+
+    color: rgba(255,255,255,.9);
+  }
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-works-link {
+    left: 11%;
+    bottom: 13%;
+
+    width: 180px;
+    height: 54px;
+  }
+
+  .section {
+    padding: 110px 48px;
+  }
+
+  .about-layout {
+    display: grid;
+
+    grid-template-columns: .85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: center;
+  }
+
+  .about-image {
+    margin-top: 0;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   LARGE PC
+========================= */
+
+@media (min-width: 1050px) {
+
+  .header-inner {
+    width: min(1280px, calc(100% - 80px));
+  }
+
+  .hero-works-link {
+    left: 11%;
+    bottom: 14%;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <a class="brand" href="#top">
+      Ryo's Craft
+    </a>
+
+    <nav class="nav">
+
+      <a href="#top">
+        HOME
+      </a>
+
+      <a href="#about">
+        ABOUT
+      </a>
+
+      <a href="#works">
+        WORKS
+      </a>
+
+      <a href="#gallery">
+        GALLERY
+      </a>
+
+      <a href="#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <button
+      class="menu-button"
+      onclick="openMenu()"
+      aria-label="メニュー">
+
+      ☰
+
+    </button>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+  aria-hidden="true">
+
+  <button
+    class="menu-close"
+    onclick="closeMenu()"
+    aria-label="閉じる">
+
+    ×
+
+  </button>
+
+
+  <ul>
+
+    <li>
+      <a
+        href="#top"
+        onclick="closeMenu()">
+
+        HOME
+
+      </a>
+    </li>
+
+
+    <li>
+      <a
+        href="#about"
+        onclick="closeMenu()">
+
+        ABOUT
+
+      </a>
+    </li>
+
+
+    <li>
+      <a
+        href="#works"
+        onclick="closeMenu()">
+
+        WORKS
+
+      </a>
+    </li>
+
+
+    <li>
+      <a
+        href="#gallery"
+        onclick="closeMenu()">
+
+        GALLERY
+
+      </a>
+    </li>
+
+
+    <li>
+      <a
+        href="#contact"
+        onclick="closeMenu()">
+
+        CONTACT
+
+      </a>
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+<main id="top">
+
+
+<!-- =========================
+     TOP
+========================= -->
+
+<section
+  class="hero"
+  aria-label="Ryo's Craft">
+
+
+  <!--
+    トップ画像
+    ファイル名は大文字・小文字を含めて
+    TOPPhoto.JPG
+  -->
+
+  <img
+    class="hero-image"
+    src="TOPPhoto.JPG"
+    alt="Ryo's Craft driftwood art">
+
+
+  <!--
+    画像の中にある
+    VIEW WORKS →
+    をタップできるようにする透明リンク
+  -->
+
+  <div class="hero-overlay">
+
+    <a
+      class="hero-works-link"
+      href="#works"
+      aria-label="View Works">
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  class="section about"
+  id="about">
+
+  <div class="section-inner about-layout">
+
+
+    <div>
+
+      <div class="section-label">
+        ABOUT RYO'S CRAFT
+      </div>
+
+
+      <h2 class="section-title">
+
+        自然の形を、<br>
+        そのままに。
+
+      </h2>
+
+
+      <p class="section-text">
+
+        木には、それぞれ違った表情があります。<br>
+        曲がり、節、傷、色の濃淡。<br>
+        ひとつとして同じものはありません。
+
+      </p>
+
+
+      <p class="section-text">
+
+        その個性をできるだけ残しながら、<br>
+        空間に馴染む作品へと仕立てています。
+
+      </p>
+
+
+      <a
+        class="outline-button"
+        href="#gallery">
+
+        ABOUT MORE&nbsp; →
+
+      </a>
+
+    </div>
+
+
+    <img
+      class="about-image"
+      src="about.jpg"
+      alt="Ryo's Craft about"
+      loading="lazy">
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     WORKS
+========================= -->
+
+<section
+  class="section works"
+  id="works">
+
+  <div class="section-inner">
+
+
+    <div class="section-label">
+      WORKS
+    </div>
+
+
+    <h2 class="section-title">
+      One of a kind.
+    </h2>
+
+
+    <p class="section-text">
+
+      流木アート、照明、ウォールアートなど、<br>
+      一点ものの作品たち。
+
+    </p>
+
+
+    <a
+      class="outline-button"
+      href="#gallery">
+
+      VIEW ALL&nbsp; →
+
+    </a>
+
+
+
+    <div class="works-grid">
+
+
+      <!-- 作品1 -->
+
+      <a
+        class="work-card"
+        href="#gallery">
+
+        <img
+          src="works.JPG"
+          alt="Driftwood artwork"
+          loading="lazy">
+
+        <div class="work-card-caption">
+          Driftwood artwork
+        </div>
+
+      </a>
+
+
+      <!-- 作品2 -->
+
+      <a
+        class="work-card"
+        href="#gallery">
+
+        <img
+          src="works-grid.JPG"
+          alt="Wood artwork"
+          loading="lazy">
+
+        <div class="work-card-caption">
+          Wood artwork
+        </div>
+
+      </a>
+
+
+      <!-- 作品3 -->
+
+      <a
+        class="work-card"
+        href="#gallery">
+
+        <img
+          src="hero-right.JPG"
+          alt="Wood light artwork"
+          loading="lazy">
+
+        <div class="work-card-caption">
+          Wood light artwork
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section
+  class="section gallery"
+  id="gallery">
+
+  <div class="section-inner">
+
+
+    <div class="section-label">
+      GALLERY
+    </div>
+
+
+    <h2 class="section-title">
+      Ryo's Craft work
+    </h2>
+
+
+    <p class="section-text">
+
+      これまでに制作した作品の一部をご紹介します。
+
+    </p>
+
+
+    <div class="gallery-grid">
+
+
+      <img
+        src="gallery.jpg"
+        alt="Ryo's Craft gallery"
+        loading="lazy">
+
+
+      <img
+        src="works.JPG"
+        alt="Driftwood artwork"
+        loading="lazy">
+
+
+      <img
+        src="works-grid.JPG"
+        alt="Wood artwork"
+        loading="lazy">
+
+
+      <img
+        src="hero-right.JPG"
+        alt="Wood light artwork"
+        loading="lazy">
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="section contact"
+  id="contact">
+
+  <div class="section-inner">
+
+
+    <div class="section-label">
+      CONTACT
+    </div>
+
+
+    <h2 class="section-title">
+
+      Let's create<br>
+      something unique.
+
+    </h2>
+
+
+    <p class="section-text">
+
+      作品についてのお問い合わせ、制作のご相談など、<br>
+      お気軽にお問い合わせください。
+
+    </p>
+
+
+    <a
+      class="outline-button"
+      href="mailto:contact@example.com">
+
+      CONTACT&nbsp; →
+
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+  <img
+    class="footer-image"
+    src="footer.jpg"
+    alt=""
+    loading="lazy">
+
+
+  <div class="footer-inner">
+
+
+    <div class="footer-brand">
+      Ryo's Craft
+    </div>
+
+
+    <div class="copyright">
+      © RYO'S CRAFT. ALL RIGHTS RESERVED.
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function openMenu() {
+
+  const menu =
+    document.getElementById("mobileMenu");
+
+  menu.classList.add("open");
+
+  menu.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeMenu() {
+
+  const menu =
+    document.getElementById("mobileMenu");
+
+  menu.classList.remove("open");
+
+  menu.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.style.overflow = "";
+}
+
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+</html>
